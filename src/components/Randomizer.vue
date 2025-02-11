@@ -24,7 +24,7 @@ const fetchMovie = async () => {
       // Fetch detailed info for the selected movie
       const movieResponse = await fetch(`https://api.themoviedb.org/3/movie/${randomMovie.id}?api_key=${apiKey}&language=en-US`);
       const movieData = await movieResponse.json();
-      
+
       // Update the movie object with the detailed info
       movie.value = {
         title: movieData.title,
@@ -50,6 +50,8 @@ onMounted(() => {
     <p>Genre: {{ movie.genre }}</p>
     <img :src="movie.poster" alt="Movie Poster" v-if="movie.poster" />
     <button @click="fetchMovie">Get New Movie</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex tenetur rem perferendis magnam id aliquam quae in
+      inventore dolores cupiditate eum minus tempora iusto doloribus enim harum, aperiam quisquam animi.</p>
   </div>
 </template>
 
